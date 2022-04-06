@@ -80,9 +80,28 @@ footer{
     left: 0;
     z-index: 10;
 }
+.left-footer{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.info{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3px;
+    padding-left: 5px;
+    margin-right: 20px;
+}
+.actions{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    height: 16px;
+    color: #a3a3a3;
+}
 
 /* BUTTONS */
-
 .btn-white{
     height: 50%;
     border: 3px solid white;
@@ -110,7 +129,13 @@ h5{
 h6{
     color: white;
 }
-
+.name{
+    color: white;
+    font-weight: 700;
+}
+.author{
+    color: #a3a3a3;
+}
 /* FONTAWESOME */
 .fa-solid.fa-plus{
     color: black;
@@ -140,6 +165,9 @@ h6{
 .user-img>img{
     width: 100%;
     vertical-align: middle;
+}
+.footer-cover{
+    height: 50%;
 }
 
 /* MISC */
