@@ -5,5 +5,24 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
 /* HEADER */
+header{
+    z-index: 9;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+/* BUTTONS */
+
+.btn-white{
+    border: 3px solid white;
+    border-radius: 40px;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+}
