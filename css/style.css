@@ -23,7 +23,8 @@ header{
 /* NAVIGATION */
 .left-nav{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    overflow: auto;
     background-color: black;
     position: fixed;
     top: 0;
@@ -86,6 +87,11 @@ footer{
     align-items: center;
     gap: 5px;
 }
+.middle-footer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .info{
     display: flex;
     flex-flow: column nowrap;
@@ -99,6 +105,41 @@ footer{
     gap: 10px;
     height: 16px;
     color: #a3a3a3;
+}
+.player{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.commands{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+.commands i{
+    font-size: 20px;
+}
+.circle{
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 3px;
+}
+.commands, .bar{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0px 10px;
+    align-items: center;
+    margin: 5px 0;
+}
+.timebar{
+    width: 300px;
+    background-color: #a3a3a3;
+    border-radius: 50px;
+    height: 5px;
 }
 
 /* BUTTONS */
@@ -133,7 +174,7 @@ h6{
     color: white;
     font-weight: 700;
 }
-.author{
+.author, .time{
     color: #a3a3a3;
 }
 /* FONTAWESOME */
