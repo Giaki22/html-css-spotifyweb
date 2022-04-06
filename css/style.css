@@ -15,8 +15,9 @@ header{
     background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 100%;
-    padding: 10px 5px;
+    height: 100px;
 }
 
 /* NAVIGATION */
@@ -43,7 +44,7 @@ li{
     margin-bottom: 10px;
     border-left: 3px solid transparent;
 }
-li a{
+li a, a{
     margin-left: 5px;
     text-decoration: none;
     text-align: center;
@@ -66,10 +67,15 @@ li a{
     gap: 5px;
 }
 
+/* FOOTER */
+footer{
+    height: 200px;
+}
 
 /* BUTTONS */
 
 .btn-white{
+    height: 50%;
     border: 3px solid white;
     border-radius: 40px;
     padding: 10px 25px;
@@ -77,7 +83,9 @@ li a{
     color: white;
     text-transform: uppercase;
 }
-
+.btn-white:hover{
+    height: 60%;
+}
 .create{
     padding-left: 5px;
     border: none;
