@@ -81,16 +81,13 @@ footer{
     left: 0;
     z-index: 10;
 }
-.left-footer{
-    margin-left: 10px;
+.left-footer, .middle-footer, .right-footer{
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.middle-footer{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.left-footer{
+    margin-left: 10px;
 }
 .info{
     display: flex;
@@ -135,11 +132,43 @@ footer{
     align-items: center;
     margin: 5px 0;
 }
-.timebar{
+.timebar, .progress{
     width: 300px;
-    background-color: #a3a3a3;
     border-radius: 50px;
     height: 5px;
+}
+.timebar, .volume-bar{
+    background-color: #5a5a5a;
+}
+.progress{
+    background-color: #a3a3a3;
+    animation: progress 275s linear;
+}
+@keyframes progress {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width:300px;
+    }
+}
+.right-footer{
+    color: white;
+    font-size: 20px;
+    gap: 10px;
+    margin-right: 10px;
+}
+.volume-bar{
+    border-radius: 50px;
+    height: 5px;
+    width: 100px;
+}
+.volume-bar-effective{
+    background-color: #a3a3a3;
+    width: 50px;
+    height: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 /* BUTTONS */
@@ -185,7 +214,15 @@ h6{
 .btn-txt{
     color: #a3a3a3;
 }
-
+.fa-volume-xmark{
+    display: none;
+}
+.volume:hover .volume-high{
+    display: none;
+}
+.volume:hover .volume-mute{
+    display: inline-block;
+}
 /* IMAGES */
 .small{
     max-width: 16px;
