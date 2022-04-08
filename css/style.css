@@ -144,12 +144,13 @@ main{
 .sec-nav a:hover{
     color: white;
 }
-.recently-played{
+.recently-played, .created_for{
     display: flex;
     flex-flow: column wrap;
     gap: 10px;
+    margin-bottom: 20px;
 }
-.recently-played-albums{
+.recently-played-albums, .created_for-albums{
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
@@ -325,6 +326,9 @@ h1{
 .name{
     color: white;
     font-weight: 700;
+}
+h3{
+    color: #a3a3a3;
 }
 .author, .time{
     color: #a3a3a3;
