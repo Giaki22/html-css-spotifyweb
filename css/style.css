@@ -7,7 +7,6 @@
     font-size: .8rem;
 }
 /* MEDIA QUERY */
-
 @media screen and (min-width:0px){
     .item{
         width: calc(100% / 2 - 10px);
@@ -111,14 +110,10 @@ hr{
 }
 /* MAIN */
 main{
-    display: flex;
-    flex-flow: column wrap;
+    margin-left: 170px;
     overflow: auto;
     padding: 100px 10px 0 10px;
     gap: 10px;
-    position: fixed;
-    top: 0;
-    right: 0;
     z-index: 8;
     width: calc(100vw - 170px);
     height: calc(100vh - 100px);
@@ -144,13 +139,11 @@ main{
 .sec-nav a:hover{
     color: white;
 }
-.recently-played, .created_for{
-    display: flex;
-    flex-flow: column wrap;
+.recently-played, .created_for, .popular{
     gap: 10px;
     margin-bottom: 20px;
 }
-.recently-played-albums, .created_for-albums{
+.recently-played-albums, .created_for-albums, .popular-artists{
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
@@ -165,6 +158,12 @@ main{
 .cover-img>img{
     width: 100%;
     display: block;
+}
+.popular-artists .item .cover-img img{
+    border-radius: 50%;
+}
+.item:hover img{
+    opacity: 40%;
 }
 /* FOOTER */
 footer{
@@ -215,15 +214,6 @@ footer{
 }
 .commands i{
     font-size: 1.5vw;
-}
-.circle{
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 1.7vw;
-    width: 1.7vw;
-    vertical-align: middle;
-    text-align: center;
-    padding-left: .1vw;
 }
 .commands, .bar{
     display: flex;
@@ -292,6 +282,30 @@ footer{
 .fa-heart:hover, .fa-folder:hover{
     color: white;
 }
+.timebar:hover .progress{
+    background-color: #80bd23;
+}
+.timebar:hover .progress::after{
+    content: "\f111";
+    color: #80bd23;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: relative;
+    left: 0vw;
+    bottom: .2vw;
+}
+.volume-bar:hover .volume-bar-effective{
+    background-color: #80bd23;
+}
+.volume-bar:hover .volume-bar-effective::after{
+    content: "\f111";
+    color: #80bd23;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: relative;
+    left: 3.8vw;
+    bottom: .4vw;
+}
 /* BUTTONS */
 .btn-white{
     height: 50%;
@@ -322,6 +336,9 @@ h6, h1{
 }
 h1{
     font-size: 2em;
+}
+h1, h3{
+    margin: 10px 0px;
 }
 .name{
     color: white;
